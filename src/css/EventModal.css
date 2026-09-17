@@ -1,0 +1,195 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.48);
+  animation: modal-backdrop-in 160ms ease-out;
+}
+
+.modal-backdrop.is-closing {
+  animation: modal-backdrop-out 160ms ease-in forwards;
+}
+
+.event-modal {
+  width: min(100%, 21rem);
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 0.45rem;
+  background: white;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
+  animation: modal-card-in 160ms ease-out;
+}
+
+.modal-backdrop.is-closing .event-modal {
+  animation: modal-card-out 160ms ease-in forwards;
+}
+
+.event-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.event-modal h2 {
+  margin: 0;
+  color: #333;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.event-date {
+  margin: 0 0 0 0.9rem;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.event-modal label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 0.8rem;
+  color: #777;
+  font-size: 0.8rem;
+}
+
+.event-modal input,
+.event-modal select {
+  min-height: 1.85rem;
+  box-sizing: border-box;
+  border: 1px solid #dadce0;
+  border-radius: 0;
+  padding: 0.3rem;
+  font: inherit;
+}
+
+.all-day-label {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 0.55rem !important;
+}
+
+.all-day-label input {
+  min-height: auto;
+}
+
+.time-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.color-field {
+  margin: 0 0 1.15rem;
+  padding: 0;
+  border: 0;
+}
+
+.color-field legend {
+  margin-bottom: 0.25rem;
+  color: #777;
+  font-size: 0.8rem;
+}
+
+.color-options {
+  display: flex;
+  gap: 0.65rem;
+}
+
+.color-option {
+  position: relative;
+  display: block !important;
+  width: 1.8rem;
+  height: 1.8rem;
+  margin: 0 !important;
+}
+
+.color-option input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.color-option span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+}
+
+.color-option input:checked + span {
+  outline: 2px solid #777;
+  outline-offset: 2px;
+}
+
+.close-button {
+  margin-left: auto;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #333;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+.time-error {
+  margin: -0.25rem 0 0.75rem;
+  color: hsl(0, 75%, 60%);
+  font-size: 0.75rem;
+}
+
+.event-actions {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.save-event-button,
+.delete-event-button {
+  flex: 1;
+  border: 1px solid hsl(150, 80%, 30%);
+  border-radius: 0.3rem;
+  padding: 0.6rem;
+  background: hsl(150, 80%, 95%);
+  color: hsl(150, 80%, 10%);
+  cursor: pointer;
+  font: inherit;
+}
+
+.delete-event-button {
+  border-color: hsl(0, 75%, 60%);
+  background: hsl(0, 75%, 95%);
+  color: hsl(0, 75%, 10%);
+}
+
+.save-event-button:hover {
+  background: hsl(150, 80%, 90%);
+}
+
+.delete-event-button:hover {
+  background: hsl(0, 75%, 90%);
+}
+
+@keyframes modal-backdrop-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modal-backdrop-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes modal-card-in {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes modal-card-out {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.96); }
+}

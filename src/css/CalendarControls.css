@@ -1,0 +1,70 @@
+.date-picker-header {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  width: 100%;
+  margin: 0 auto 0.6rem;
+  font-weight: bold;
+  font-size: 0.95rem;
+  align-items: center;
+}
+
+.current-month {
+  white-space: nowrap;
+}
+
+.add-event-button {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.35rem;
+  display: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #777;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.date:hover .add-event-button,
+.add-event-button:focus-visible {
+  display: block;
+}
+
+.today-button {
+  padding: 0.35rem 0.65rem;
+  border: 1px solid #dadce0;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  background: white;
+  font-size: 0.85rem;
+}
+
+.month-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 0.15rem;
+  font-size: 1rem;
+}
+
+.month-button:hover {
+  background-color: #f1f3f4;
+  border-radius: 0.5rem;
+}
+
+.today-button:hover,
+.add-event-button:hover {
+  background-color: #f1f3f4;
+}
+
+@media (max-width: 600px) {
+  .date-picker-header {
+    width: 100%;
+    gap: 0.35rem;
+    font-size: 0.85rem;
+  }
+}

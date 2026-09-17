@@ -1,0 +1,109 @@
+.event-list {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  max-width: 100%;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 0.15rem;
+  gap: 0.1rem;
+}
+
+.event {
+  flex: 0 0 0.9rem;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-size: 0.7rem;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.event-all-day {
+  width: 100%;
+  line-height: 0.6rem;
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.2rem;
+  color: white;
+}
+
+.event-timed {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.05rem 0;
+  color: #333;
+}
+
+.event-dot {
+  flex: 0 0 auto;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+.event-time {
+  color: #777;
+}
+
+.event-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.event-red {
+  background-color: hsl(0, 75%, 60%);
+}
+
+.event-blue {
+  background-color: hsl(200, 80%, 50%);
+}
+
+.event-green {
+  background-color: hsl(150, 80%, 30%);
+}
+
+.event-timed.event-red {
+  background-color: transparent;
+  color: hsl(0, 75%, 60%);
+}
+
+.event-timed.event-blue {
+  background-color: transparent;
+  color: hsl(200, 80%, 50%);
+}
+
+.event-timed.event-green {
+  background-color: transparent;
+  color: hsl(150, 80%, 30%);
+}
+
+.event-timed .event-name {
+  color: #777;
+}
+
+.more-events {
+  margin-top: auto;
+  width: 100%;
+  min-height: 0;
+  box-sizing: border-box;
+  border: 0;
+  background: none;
+  padding: 0;
+  flex: 0 0 0.9rem;
+  color: #333;
+  cursor: pointer;
+  font-size: 0.7rem;
+  font-weight: bold;
+  line-height: 0.9rem;
+  text-align: center;
+}

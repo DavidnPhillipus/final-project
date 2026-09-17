@@ -1,0 +1,60 @@
+.date-picker-other-month-date {
+  background-color: #f5f6f7 !important;
+  color: #666;
+}
+
+.date-picker-other-month-date .date-weekday,
+.date-picker-other-month-date .date-number,
+.date-picker-other-month-date .event-list {
+  opacity: 0.45;
+}
+
+.date-picker-grid-dates > .date {
+  overflow: hidden;
+  background-color: white;
+  font-size: 0.65rem;
+  box-sizing: border-box;
+}
+
+.date-past .date-weekday,
+.date-past .date-number,
+.date-past .event-list {
+  opacity: 0.45;
+}
+
+.date-weekday {
+  display: block;
+  flex: 0 0 0.5rem;
+  line-height: 0.5rem;
+  font-size: 0.55rem;
+  font-weight: bold;
+  color: #777;
+  text-transform: uppercase;
+}
+
+.date.today {
+  color: #111;
+  font-weight: bold;
+}
+
+.date.today .date-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: hsl(200, 80%, 50%);
+  color: white;
+}
+
+.date-number {
+  flex: 0 0 1rem;
+  line-height: 1rem;
+}
+
+@media (max-width: 600px) {
+  .date-weekday {
+    align-self: center;
+  }
+}
